@@ -40,6 +40,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
       <Link href={`/startup/${_id}`}>
         <p className="startup-card_desc">{description}</p>
 
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={image} alt="placeholder" className="startup-card_img" />
       </Link>
 
