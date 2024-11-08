@@ -41,10 +41,10 @@ const Navbar = async () => {
                 </button>
               </form>
 
-              <Link href={`/user/${session?.user?.id ?? ''}`}>
+              <Link href={`/user/${session?.id ?? ''}`}>
                 <Avatar className="size-10">
                   <AvatarImage src={session?.user?.image || ''} alt={session?.user?.name || ''} />
-                  <AvatarFallback className='bg-slate-400 text-white'>{session?.user?.name?.split(' ')?.map(w => w[0])?.slice(0, 2).join('') || 'U'}</AvatarFallback>
+                  <AvatarFallback className='bg-slate-400 text-white'>{session?.user?.name?.split(' ')?.map((w: string) => w[0])?.slice(0, 2).join('') || 'U'}</AvatarFallback>
                 </Avatar>
               </Link>
             </>
